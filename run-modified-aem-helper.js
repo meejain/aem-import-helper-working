@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Path to our modified AEM import helper
-const modifiedHelperPath = path.join(__dirname, 'aem-import-helper-working', 'src', 'bin.js');
+const modifiedHelperPath = path.join(__dirname, 'src', 'bin.js');
 
 // Command arguments
 const args = [
