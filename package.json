@@ -1,0 +1,81 @@
+{
+  "name": "@adobe/aem-import-helper",
+  "version": "1.2.2",
+  "description": "Helper tool for importing sites to AEM.",
+  "author": "AEM Importer Team",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/bin.js",
+    "test": "c8 mocha",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "semantic-release": "semantic-release",
+    "semantic-release-dry": "semantic-release --dry-run --branches $CI_BRANCH"
+  },
+  "bin": {
+    "aem-import-helper": "src/bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adobe/aem-import-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/aem-import-helper/issues"
+  },
+  "homepage": "https://github.com/adobe/aem-import-helper#readme",
+  "keywords": [
+    "AEM",
+    "import",
+    "Edge"
+  ],
+  "engines": {
+    "node": ">=20.17.0 <22.15.0",
+    "npm": "^10.0.0 <11.0.0"
+  },
+  "dependencies": {
+    "@adobe/aem-upload": "2.0.3",
+    "aem-import-builder": "0.3.2",
+    "archiver": "7.0.1",
+    "chalk": "5.3.0",
+    "esbuild": "0.23.0",
+    "express": "4.21.0",
+    "find-up": "7.0.0",
+    "formdata-node": "6.0.3",
+    "inquirer": "12.2.0",
+    "jsdom": "25.0.1",
+    "node-fetch": "3.3.2",
+    "ora": "8.1.0",
+    "puppeteer": "23.1.0",
+    "sharp": "0.33.4",
+    "unzipper": "0.12.3",
+    "xml2js": "0.6.2",
+    "yargs": "17.7.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.13.0",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@stylistic/eslint-plugin": "2.10.1",
+    "c8": "10.1.2",
+    "chai": "5.1.1",
+    "chai-as-promised": "8.0.0",
+    "eslint": "9.13.0",
+    "esmock": "2.6.7",
+    "globals": "15.11.0",
+    "mocha": "10.7.3",
+    "nock": "14.0.1",
+    "semantic-release": "24.2.3",
+    "sinon": "18.0.1",
+    "sinon-chai": "4.0.0"
+  },
+  "overrides": {
+    "@adobe/aem-upload": {
+      "@adobe/httptransfer": "5.0.0"
+    }
+  }
+}
