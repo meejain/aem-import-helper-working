@@ -1,5 +1,7 @@
 # AEM Import Helper
 
+node run-modified-aem-helper.js
+
 A helpful companion for importing your site to AEM.
 
 ### Features
